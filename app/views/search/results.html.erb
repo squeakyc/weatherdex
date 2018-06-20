@@ -1,0 +1,18 @@
+<div class="well">
+  <% if @error_message.nil? %>
+      <h1>Currently in <%= @name %></h1>
+      <h4>Condition: <%= @description %> <%= image_tag "http://openweathermap.org/img/w/#{@icon}.png" %></h4>
+      <h4>Current Temperature: <%= @temp.to_i %>&deg;F</h4>
+      <h4>Humidity: <%= @humidity %>&percnt;</h4>
+      <h4>High: <%= @temp_high.to_i %>&deg;F</h4>
+      <h4>Low: <%= @temp_low.to_i %>&deg;F</h4>
+    <% else %>
+      <div class="alert alert-danger" role = "alert">
+        <%= @error_message %>
+      </div>
+    <% end %>
+</div>
+
+<div class="well">
+  <%= render 'form' %>
+</div>

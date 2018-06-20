@@ -1,0 +1,6 @@
+<div class="container">
+  <%= form_tag(search_results_path, method: :get) do %>
+    <%= text_field_tag :zipcode, nil, placeholder: 'Enter a Location', autofocus: true %>
+    <%= submit_tag 'Get Weather', class: 'btn btn-info' %>
+  <% end %>
+</div>
